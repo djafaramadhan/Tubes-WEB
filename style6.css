@@ -1,0 +1,128 @@
+/* Reset margin dan padding untuk semua elemen */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Menambahkan font yang sudah disertakan */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url('WEB/Aset/Login\ 1.png') no-repeat center center fixed; /* Ganti dengan path gambar latar belakang */
+    background-size: cover; /* Agar gambar menutupi seluruh halaman */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+/* Container utama profil */
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 0, 0, 0.5); /* Transparan dengan latar belakang merah */
+    position: absolute;
+}
+
+/* Box profil */
+.profile-box {
+    background: rgba(255, 255, 255, 0.9); /* Background putih transparan */
+    border-radius: 15px;
+    padding: 30px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Header Text */
+.header-text {
+    margin-bottom: 20px;
+}
+
+.suara-logo {
+    width: 80px; /* Ukuran logo */
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Judul halaman */
+h2 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #e60000; /* Dominasi warna merah */
+}
+
+/* Deskripsi kecil */
+p {
+    font-size: 14px;
+    color: #777;
+}
+
+/* Formulir untuk memperbarui profil */
+.profile-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Setiap grup input */
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.form-group input {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #e60000; /* Merah saat fokus */
+}
+
+/* Tombol update profil */
+.profile-btn {
+    background-color: #e60000; /* Dominasi merah pada tombol */
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.profile-btn:hover {
+    background-color: #b30000; /* Warna merah lebih gelap saat hover */
+}
+
+/* Footer dengan link kembali */
+.footer {
+    margin-top: 20px;
+}
+
+.footer .back-btn {
+    color: #e60000; /* Warna merah pada link kembali */
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer .back-btn:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,375 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Body */
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #fff;
+}
+
+/* Header Image as Banner */
+.header-banner {
+    width: 100%;
+    height: 300px;  /* Adjust height as needed */
+    position: relative;
+    background-image: url('WEB/Feast.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 200px;
+    background-color: transparent;
+    box-shadow: none;
+    width: 100%;
+    position: sticky;  /* Stick to top */
+    top: 0;
+    z-index: 200;
+    transition: all 0.3s ease;
+    margin-top: -300px;  /* Pull header down to overlap image */
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    z-index: 201;
+}
+
+.wave-logo {
+    width: 200px;
+    margin-right: 20px;
+}
+
+.brand-name {
+    font-size: 36px;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Navigation Header */
+.nav-header .nav-link {
+    text-decoration: none;
+    margin-right: 20px;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 600;
+    transition: color 0.3s;
+    cursor: pointer;
+}
+
+.nav-header .nav-link:hover {
+    color: #E00D0D;
+    text-decoration: underline;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 200px;
+    background-color: #f8f8f8;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+.sidebar .menu-item {
+    text-decoration: none;
+    color: #555;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 12px 15px;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 8px;
+}
+
+.sidebar .menu-item:hover {
+    background-color: #E00D0D;
+    color: #fff;
+}
+
+.sidebar .menu-item img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s;
+}
+
+.sidebar .menu-item:hover img {
+    transform: scale(1.1);
+}
+
+.sidebar .menu-item.active {
+    background-color: #E00D0D;
+    color: #fff;
+    font-weight: 600;
+}
+
+/* Main Content */
+.content {
+    margin-left: 200px;
+    padding: 20px;
+    width: calc(100% - 200px);
+}
+
+/* Search Bar */
+.search-bar {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    position: relative;
+}
+
+.search-bar input {
+    width: 70%;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+}
+
+.search-btn {
+    position: absolute;
+    right: 15%;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #E00D0D;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.search-btn:hover {
+    background-color: #D93C3C;
+}
+
+/* Songs and Artists */
+.songs, .artists {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    text-align: center;
+}
+
+.song-item {
+    padding: 10px;
+    font-weight: bold;
+    color: #E00D0D;
+    border-bottom: 2px solid #E00D0D;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.song-item:hover {
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+.song-item:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.artist-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.artist-item img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.artist-item span {
+    font-weight: bold;
+    color: #E00D0D;
+}
+
+.artist-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.artist-item:active {
+    transform: scale(0.95);
+}
+
+/* Album */
+.hits-album .albums {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 10px;
+}
+
+.album-item {
+    flex: 0 0 auto;
+    width: 250px;
+    scroll-snap-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.album-item img {
+    width: 100%;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.album-item:hover {
+    transform: scale(1.05);
+}
+
+.hits-album::-webkit-scrollbar {
+    height: 8px;
+}
+
+.hits-album::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.hits-album::-webkit-scrollbar-thumb {
+    background: #E00D0D;
+    border-radius: 10px;
+}
+
+/* Audio Player */
+#audio-container {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    display: none;
+    width: 90%;
+}
+
+audio {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+}
+
+.footer a {
+    color: #E00D0D;
+    text-decoration: none;
+}
+
+/* Login */
+.login-container {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    max-width: 400px;
+    width: 100%;
+}
+
+.login-box h2 {
+    font-size: 28px;
+    color: #E00D0D;
+    margin-bottom: 20px;
+}
+
+.input-field input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+.input-field input:focus {
+    border-color: #E00D0D;
+}
+
+.login-btn {
+    background-color: #E00D0D;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+.login-btn:hover {
+    background-color: #D93C3C;
+}
+
+/* Slideshow */
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    height: 300px; /* Sesuaikan dengan ukuran yang diinginkan */
+    overflow: hidden;
+}
+
+.full-width-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#slideshow {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    transition: opacity 0.5s ease-out; /* Transisi gambar */
+    opacity: 1;
+}

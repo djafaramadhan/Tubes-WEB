@@ -1,0 +1,150 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('WEB/Aset/Sign Up Latar.png') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between; /* Logo di kiri, navigasi di kanan */
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo */
+.header .logo {
+    display: flex;
+    align-items: center;
+}
+
+.header .logo img {
+    width: 120px;
+    margin-right: 10px;
+}
+
+.header .brand-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #e63946;
+}
+
+/* Navigasi di kanan atas */
+.nav-header {
+    display: flex;
+    gap: 20px; /* Jarak antar-link */
+}
+
+.nav-header .nav-link {
+    color: #e63946;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.nav-header .nav-link:hover {
+    background-color: #ffe5e5; /* Warna latar belakang saat hover */
+}
+
+/* Admin Container */
+.admin-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.admin-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #e63946;
+}
+
+.admin-container h2 {
+    margin-top: 20px;
+    color: #e63946;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table thead {
+    background-color: #e63946;
+    color: #fff;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+table tr:nth-child(even) {
+    background-color: #fff5f5;
+}
+
+table tr:hover {
+    background-color: #ffe5e5;
+}
+
+/* Form Styles */
+.add-user-form {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.add-user-form input, .add-user-form select, .add-user-form button {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.add-user-form button {
+    background-color: #e63946;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-user-form button:hover {
+    background-color: #c92636;
+}
+
+/* Button Styles */
+button {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #e63946;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #c92636;
+}
+
+ul {
+    display: none;
+}

@@ -1,0 +1,150 @@
+/* General Styling */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Pastikan halaman penuh */
+    background-color: #f1f1f1;
+}
+
+.login-container {
+    position: relative;
+    background-image: url('WEB/Aset/Login\ 1.png'); /* Ganti dengan gambar latar belakang */
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Center the login box */
+.login-box {
+    background: rgba(255, 255, 255, 0.9); /* Sedikit lebih transparan agar latar belakang terlihat */
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    max-height: 500px;;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Header Text and Logo */
+.header-text {
+    display: flex;
+    flex-direction: column; /* Menyusun logo dan teks secara vertikal */
+    justify-content: center;
+    align-items: center; /* Menyusun semua elemen di tengah */
+    margin-bottom: 20px;
+}
+
+.wave-logo {
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+.suara-logo {
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+.brand-name {
+    font-size: 36px;
+    font-weight: bold;
+    color: #E00D0D;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #E00D0D;
+    margin-top: -20px;
+}
+
+p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+/* Form Styles */
+.login-form input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.login-form a {
+    color: #E00D0D;
+    text-decoration: none;
+    font-size: 14px;
+    display: inline-block;
+    margin-bottom: 20px;
+   
+}
+
+.login-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #E00D0D;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login-btn:hover {
+    background-color: #D93C3C;
+}
+
+/* Footer */
+.footer {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #555;
+}
+
+.footer a {
+    color: #E00D0D;
+    text-decoration: none;
+    
+}
+
+/* Social Media Buttons */
+.social-login {
+    margin-top: 20px;
+}
+
+.social-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: white;
+    font-size: 20px;
+    border: none;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.social-btn.google {
+    background-color: #db4437;
+}
+
+.social-btn.facebook {
+    background-color: #3b5998;
+}
+
+.social-btn.apple {
+    background-color: #333;
+}
